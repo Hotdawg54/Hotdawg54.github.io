@@ -1,0 +1,17 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .carousel-item img {
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .rounded-circle {
+    object-fit: cover;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  

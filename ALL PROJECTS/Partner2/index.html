@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="styleSheet" href="style.css">
+    <title>Greeting Page</title>
+    <script src = "Script.js"></script>
+    <h1>Hello User!</h1>
+    <p>Welcome to our website. We hope you have a great experience!</p>
+</head>
+<header>
+    <nav>
+        <a href="../../index.html" class="back-link">Back to Portfolio</a>
+    </nav>
+</header>
+<body>
+    
+    <form id="customizationForm">
+        <label for="userName">Enter your name:</label>
+        <input type="text" id="userName" name="userName"><br><br>
+
+        <label for="userMessage">Enter your message:</label>
+        <input type="text" id="userMessage" name="userMessage"><br><br>
+
+        <label for="backgroundColor">Choose background color:</label>
+        <select id="backgroundColor" name="backgroundColor">
+            <option value="white">White</option>
+            <option value="lightblue">Light Blue</option>
+            <option value="lightgreen">Light Green</option>
+            <option value="lightyellow">Light Yellow</option>
+        </select><br><br>
+
+        <button type="button" onclick="customizePage()">Submit</button>
+    </form>
+
+    <h2>To Do List</h2>
+    <form id="todoForm">
+        <label for="todoItem">Add a new item:</label>
+        <input type="text" id="todoItem" name="todoItem"><br><br>
+        <button type="button" onclick="addTodoItem()">Add Item</button>
+    </form>
+
+    <ol id="todoList"></ol>
+
+</body>
+</html>

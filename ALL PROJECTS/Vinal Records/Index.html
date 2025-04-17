@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinal Records</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ice Spice Hall of Fame</h1>
+        <nav>
+            <ul style="list-style-type: none; display: flex; gap: 10px; padding: 0;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#catalog">Catalog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <a href="../../index.html" class="back-link">Back to Portfolio</a>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are dedicated</p>
+    </section>
+
+    <section id="featured-albums" class="featured-albums">
+        <h2>Featured Albums</h2>
+        <div class="album">
+            <img src="ICESPICEYK2.jpg" alt="Ice Spice - Album 1" style="width: 200px; height:150px; border-radius: 10px;">
+            <p>Y2K!</p>
+        </div>
+        <div class="album">            
+            <img src="ThisIsIceSpice.jpg" alt="Ice Spice - Album 2" style="width: 200px; height:200px; border-radius: 10px;">
+            <p>This is Ice Spice: Best Of</p>
+        </div>
+        <div class="album">
+            <img src="ICESPICELIKE.jpg" alt="Ice Spice - Album 3" style="width: 200px; height:200px; border-radius: 10px;">
+            <p>Like?</p>
+        </div>
+        <div class="album">
+            <img src="ThinkYOuTheSHit.jpeg" alt="Ice Spice - Album 4" style="width: 200px; height:200px; border-radius: 10px;">
+            <p>Think you the Shit?(fart): Hit Single </p>
+        </div>
+        <div class="album">
+            <img src="wh6zpzmq.png" alt="Ice Spice - Album 5" style="width: 200px; height:200px; border-radius: 10px;">
+            <p>Munch: Hit single</p>
+        </div>
+    </section>
+
+    <section id="inventory" class="inventory">
+        <h2>Inventory</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Artist Name</th>
+                    <th>Album Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ice Spice</td>
+                    <td>Y2K!</td>
+                    <td>$25.00</td>
+                </tr>
+                <tr>
+                    <td>Ice Spice</td>
+                    <td>This is Ice Spice: Best Of</td>
+                    <td>$20.00</td>
+                </tr>
+                <tr>
+                    <td>Ice Spice</td>
+                    <td>Like?</td>
+                    <td>$15.99</td>
+                </tr>
+                <tr>
+                    <td>Ice Spice</td>
+                    <td>Think you the Shit?(fart): Hit Single</td>
+                    <td>$10.00</td>
+                </tr>
+                <tr>
+                    <td>Ice Spice</td>
+                    <td>Munch: Hit single</td>
+                    <td>$10.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have any questions? Reach out to us!</p>
+        <form action="thankyou.html" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Vinal Records. All rights reserved.</p>
+    </footer>
+</body>
+</html>

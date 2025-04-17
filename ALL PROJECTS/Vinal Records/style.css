@@ -1,0 +1,126 @@
+body {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+}
+
+header {
+    width: 100%;
+    height: 400px;
+    background: url('icespice1.jpeg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    padding-top: 20px; 
+    border-bottom: 5px solid #ff69b4; /* Pink border */
+}
+
+header h1 {
+    margin: 0; 
+    padding: 10px; 
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px; /* Rounded corners */
+    color: #ff69b4; /* Pink text */
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #ff69b4; /* Pink text */
+    font-weight: bold;
+}
+
+header ul li a:hover {
+    color: #ff1493; /* Darker pink on hover */
+}
+
+.featured-albums {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.album-container {
+    display: flex;
+    flex-direction: row; /* Display albums from left to right */
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.album {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #ff69b4; /* Pink border */
+    border-radius: 15px; /* Rounded corners */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+
+.album img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* Ensure the images maintain their aspect ratio */
+}
+
+.album:hover {
+    transform: scale(1.2); /* Grow the album cover by 1.2x on hover */
+}
+
+.inventory {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.inventory table {
+    width: 80%;
+    border-collapse: collapse;
+    border-radius: 15px; /* Rounded corners for table */
+    overflow: hidden; /* Ensure rounded corners are visible */
+}
+
+.inventory th, .inventory td {
+    border: 1px solid #ff69b4; /* Pink border */
+    padding: 10px;
+    text-align: left;
+}
+
+.inventory th {
+    background-color: #ffebf0; /* Light pink background for headers */
+    color: #ff69b4; /* Pink text */
+}
+
+.inventory td {
+    background-color: #fff; /* White background for cells */
+}
+
+footer {
+    background-color: #ff69b4; /* Pink background */
+    color: #fff; /* White text */
+    padding: 10px;
+    border-radius: 15px; /* Rounded corners */
+    margin-top: 20px;
+}

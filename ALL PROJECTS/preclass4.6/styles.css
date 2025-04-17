@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #1a1a1a;
+  padding: 20px;
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar content1 content1"
+    "sidebar content2 content3"
+    "footer footer footer";
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 80px 200px 200px 80px;
+  gap: 20px;
+}
+
+.header, .sidebar, .content1, .content2, .content3, .footer {
+  position: relative; /* Required for pseudo-elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures the shimmer effect stays within the box */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.header:hover,
+.sidebar:hover,
+.content1:hover,
+.content2:hover,
+.content3:hover,
+.footer:hover {
+  transform: scale(1.2); /* Grows the box by 1.2 times */
+}
+
+.header {
+  grid-area: header;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: linear-gradient(to bottom, #00c6ff, #0072ff);
+}
+
+.content1 {
+  grid-area: content1;
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+}
+
+.content2 {
+  grid-area: content2;
+  background: linear-gradient(to right, #00c9ff, #92fe9d);
+}
+
+.content3 {
+  grid-area: content3;
+  background: linear-gradient(to right, #fc466b, #3f5efb);
+}
+
+.footer {
+  grid-area: footer;
+  background: linear-gradient(to right, #43e97b, #38f9d7);
+}
+
+.header img,
+.sidebar img,
+.content1 img,
+.content2 img,
+.content3 img,
+.footer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the box without distortion */
+}
+
+/* Shimmer effect keyframes */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Add shimmer effect overlay */
+.content1::before,
+.content2::before,
+.content3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  background-size: 200% auto;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+  z-index: 1; /* Ensures the shimmer is above the image */
+}
+
+/* Show shimmer effect on hover */
+.content1:hover::before,
+.content2:hover::before,
+.content3:hover::before {
+  opacity: 1; /* Makes the shimmer visible */
+  animation: shimmer 1.5s linear infinite;
+}
